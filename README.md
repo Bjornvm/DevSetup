@@ -1,5 +1,7 @@
 # Development Setup
 
+This repository contains notes and instructions for installing and configuring basic development tools based on my personal preferences. The tools included in this repository are meant to serve as a starting point for setting up a development workstation and can be customized to suit your individual needs.
+
 ## Font
 
 Download and install ***JetBrainsMono nerdfont***
