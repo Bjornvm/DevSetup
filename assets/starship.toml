@@ -1,0 +1,55 @@
+# ~/.config/starship.toml
+
+# Colors
+# See ANSI table
+# https://i.stack.imgur.com/KTSQa.png
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change the default prompt format with multiline basic string
+format = """
+[╭─](purple bold) $env_var$username$hostname at $all\
+[╰─](purple bold) $character"""
+
+# Set custom color palette
+palette = "bvamo"
+
+# Define custom colors
+[palettes.bvamo]
+purple = "#C678DD"
+green = "#98C379"
+yellow = "#D19A66"
+red = "#DA6860"
+
+# Change the default prompt characters
+[character]
+success_symbol = "[\\$](purple bold)"
+error_symbol = "[\\$](purple bold)"
+
+# Shows the username
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[$user]($style)"
+disabled = false  # disable in powershell
+show_always = true
+
+[hostname]
+ssh_only = true
+format = "[@](purple bold)[$hostname](white bold)"
+trim_at = ""
+disabled = false
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = false
+style = "purple bold"
+home_symbol = "~"
+read_only_style = "197"
+read_only = "  "
+format = "[$path]($style)[$read_only]($read_only_style) "
